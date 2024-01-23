@@ -3,13 +3,20 @@
 
 html {
   font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,*:before,*:after {
+  box-sizing: inherit
 }
 
 body {
-  background-color: black;
-  color: white;
   padding: 0;
   margin: 0;
+  width: 100%;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 button {
@@ -33,13 +40,14 @@ button:hover {
 
 p {
   background-color: #fff9;
-  display: flex;
   color: black;
   padding: 15px;
   justify-content: center;
 }
 
 h1 {
+  font-size: 50px;
+  color: white;
   text-shadow: 2px 2px 0 orange,
                -2px -2px 0 orange,
                -2px 2px 0 orange,
@@ -53,7 +61,7 @@ h1 {
 }
 
 .container {
-  width: 320px;
+  width: 100%;
   margin:  0 auto;
   display: flex;
   flex-direction: column;
@@ -63,19 +71,68 @@ h1 {
 }
 
 .phraseAutor {
-  min-height: 65vh;
+  background-color: #ffffff80;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 20px
+}
+
+.containerPhrase {
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between
 }
 
 .bgRec {
-  background-image: url('../assets/rectangle2.svg');
-  background-repeat: no-repeat;
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../assets/rectangle2.svg);
   background-size: cover;
   background-position: center;
-  height: 150px;
-  width: 500px;
+  justify-content: center;
   align-items: center;
-  font-size: 20px;
+  border-radius: 0 0 60px;
+  font-size: 1.3rem
+}
+
+.containerPhrase img {
+  position: fixed;
+  right: 0;
+  bottom: 400px
+}
+
+@media screen and (min-width: 800px) {
+  .containerPhrase {
+      min-height:40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between
+  }
+
+  .bgRec {
+      font-size: 30px
+  }
+
+  button {
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1.3rem;
+      padding: 5px 20px
+  }
+
+  .app {
+      width: 100%;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center
+  }
+
+  h1 {
+    font-size: 60px;
+  }
 }

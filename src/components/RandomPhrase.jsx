@@ -5,9 +5,9 @@ const RandomPhrase = ({quote}) => {
     const {author, phrase} = quote
 
   return (
-    <div className = 'phraseAutor'>
+    <div className='containerPhrase'>
         <p className='bgRec'>{phrase}</p>
-        <p>Fuente: {author}</p>
+        <p className = 'phraseAutor'>Fuente: {author}</p>
     </div>
   )
 }
